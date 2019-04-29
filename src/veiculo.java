@@ -1,21 +1,17 @@
 public class veiculo {
 
-    public String nome;
-    public String marca;
-    public String placa;
-    public boolean status = true;
-    public int ano;
-    public int cod;
-    public Pessoa dono;
+    private String nome;
+    private String marca;
+    private String placa;
+    private boolean status = true;
+    private int ano;
+    private int cod;
 
 
     public String getMarca() {
         return marca;
     }
 
-    public Pessoa getDono() {
-        return dono;
-    }
 
     public int getCod() {
         return cod;
@@ -37,9 +33,6 @@ public class veiculo {
         return status;
     }
 
-    public void setDono(Pessoa dono) {
-        this.dono = dono;
-    }
 
     public void setStatus(boolean status) {
         this.status = status;
@@ -77,16 +70,15 @@ public class veiculo {
     // Vários veiculos estavam sendo cadastrados incorretamente, agora precisamos saber se os veiculos sao iguais
 
     public void igual(veiculo v1, veiculo v2){
-       if (v1.getPlaca().equals(v2.getPlaca())){
-           System.out.println("Veiculos são iguais");
-
-       }else{
-           System.out.println("Veiculos são diferentes");
-       }
+      if (v1 == v2){
+        System.out.println("Veiculos são iguais");
+      }else{
+        System.out.println("Veiculos são diferentes");
+      }
     }
 //    COmparando os modelos dos veiculos
-    public void compararModelo(veiculo v1, veiculo v2){
-        if (v1.getMarca().equals(v2.getMarca())){
+    public void compararModelo(veiculo v1){
+        if (v1.getMarca().equals(this.getMarca())){
             System.out.println("Marca são iguais");
         }else{
             System.out.println("Marca são diferentes");
@@ -95,8 +87,8 @@ public class veiculo {
 
     //Comparando placa dos veiculos
 
-    public void compararPlaca(veiculo v1, veiculo v2){
-        if (v1.getPlaca().equals(v2.getPlaca())){
+    public void compararPlaca(veiculo v1){
+        if (v1.getPlaca().equals(this.getPlaca())){
             System.out.println("Placas são iguais");
 
         }else{
@@ -104,11 +96,13 @@ public class veiculo {
         }
     }
     // Comparando os anos dos carros
-    public void compararAno(veiculo v1, veiculo v2){
-        if (v1.getAno() < v2.getAno()){
+    public void compararAno(veiculo v1){
+        if (v1.getAno() < this.getAno()){
             System.out.println(v2.getNome() + " É mais antigo");
         }else{
-            System.out.println(v1.getNome() + " É mais antigo");
+            System.out.println(this.getNome() + " É mais antigo");
+        }if(v1.getAno() == this.getAno()){
+            System.out.println(v2.getNome() +" & " + this.getNome() + " Tem o mesmo ano");
         }
     }
 }

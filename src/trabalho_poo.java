@@ -20,7 +20,7 @@ public class trabalho_poo {
         v1.setPlaca("ABC-1234");
         v1.setCod(2);
         v1.setStatus(true);
-        
+
     // Checando disponibilidade do veiculo 2
         v1.checarDisponivel(2);
 
@@ -28,10 +28,10 @@ public class trabalho_poo {
         v.igual(v, v1);
 
         // COmparando se os modelos são iguais
-        v.compararModelo(v, v1);
+        v.compararModelo(v1);
 
         // COmparando se as placas são iguais
-        v.compararPlaca(v, v1);
+        v.compararPlaca(v1);
 
         // COmparando os anos dos veiculos
         v.compararAno(v, v1);
@@ -50,8 +50,7 @@ public class trabalho_poo {
         v2.setMarca("Chevrolet");
         v2.setCod(3);
         v2.setPlaca("IFG-9876");
-//        Atribuindo um dono
-        v2.setDono(p1);
+
 
         System.out.println(p1.getNome() +" Possui um " + p1.getCarro().getNome());
 

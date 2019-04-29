@@ -1,9 +1,9 @@
 public class Pessoa {
 
-    public String nome;
-    public  int cnh;
-    public int idade;
-    public veiculo carro;
+    private String nome;
+    private  int cnh;
+    private int idade;
+    private veiculo carro;
 
 
     public String getNome() {
@@ -38,5 +38,3 @@ public class Pessoa {
         this.idade = idade;
     }
 }
-
-
