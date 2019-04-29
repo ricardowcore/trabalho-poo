@@ -98,11 +98,11 @@ public class veiculo {
     // Comparando os anos dos carros
     public void compararAno(veiculo v1){
         if (v1.getAno() < this.getAno()){
-            System.out.println(v2.getNome() + " É mais antigo");
         }else{
+          System.out.println(this.getNome() + " É mais antigo");
             System.out.println(this.getNome() + " É mais antigo");
         }if(v1.getAno() == this.getAno()){
-            System.out.println(v2.getNome() +" & " + this.getNome() + " Tem o mesmo ano");
+            System.out.println(this.getNome() +" & " + this.getNome() + " Tem o mesmo ano");
         }
     }
 }
